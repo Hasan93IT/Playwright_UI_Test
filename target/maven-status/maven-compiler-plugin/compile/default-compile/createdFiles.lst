@@ -1,4 +1,4 @@
 Pages\Login.class
+Utils\Util.class
 Pages\CheckoutProcess.class
-QA\Util.class
 Pages\OrderProcess.class
