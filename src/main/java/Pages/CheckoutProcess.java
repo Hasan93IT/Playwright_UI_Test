@@ -10,16 +10,17 @@ public class CheckoutProcess {
         this.page = page;
     }
 
+    // locators of checkout
     final String CheckoutButtonLocator = "//*[@id=\"checkout\"]";
     final String FirstNameField = "//*[@id=\"first-name\"]";
     final String LastNameField = "//*[@id=\"last-name\"]";
     final String PostalCodeField = "//*[@id=\"postal-code\"]";
     final String ContinueButton = "//*[@id=\"continue\"]";
     final String FinishButton = "//*[@id=\"finish\"]";
-    final String PaymentInformationText= "//*[@data-test=\"payment-info-value\"]";
-    final String VerifyFinishOrder= "//*[contains(text(),\"Thank you for your order!\")]";
+    final String PaymentInformationText = "//*[@data-test=\"payment-info-value\"]";
+    final String VerifyFinishOrder = "//*[contains(text(),\"Thank you for your order!\")]";
 
-
+    // to get locators of checkout
     public Locator CheckoutButton() {
         return page.locator(CheckoutButtonLocator);
     }
@@ -43,6 +44,7 @@ public class CheckoutProcess {
     public Locator FinishButton() {
         return page.locator(FinishButton);
     }
+
     public Locator PaymentInformationText() {
         return page.locator(PaymentInformationText);
     }

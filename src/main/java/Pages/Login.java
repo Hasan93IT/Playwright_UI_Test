@@ -4,13 +4,12 @@ package Pages;
 import com.microsoft.playwright.*;
 
 
-public class Login  {
-   public Page page;
+public class Login {
+    public Page page;
 
     public Login(Page page) {
         this.page = page;
     }
-
 
     String usernameFieldLocator = "//input[@id=\"user-name\"]";
     String PasswordFieldLocator = "//input[@id=\"password\"]";
@@ -19,15 +18,15 @@ public class Login  {
 
 
     public Locator setUsernameField() {
-       return page.locator(usernameFieldLocator);
+        return page.locator(usernameFieldLocator);
     }
 
     public Locator setPasswordField() {
-       return page.locator(PasswordFieldLocator);
+        return page.locator(PasswordFieldLocator);
     }
 
     public Locator ClickLoginButton() {
-       return page.locator(LoginButtonLocator);
+        return page.locator(LoginButtonLocator);
     }
 
     public void VerifyLogin() {
