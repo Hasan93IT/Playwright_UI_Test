@@ -12,9 +12,9 @@ public class Login {
     }
 
     String usernameFieldLocator = "//input[@id=\"user-name\"]";
-    String PasswordFieldLocator = "//input[@id=\"password\"]";
-    String LoginButtonLocator = "//input[@id=\"login-button\"]";
-    String ShoppingCart = "//div[@id=\"shopping_cart_container\"]";
+    String passwordFieldLocator = "//input[@id=\"password\"]";
+    String loginButtonLocator = "//input[@id=\"login-button\"]";
+    String shoppingCart = "//div[@id=\"shopping_cart_container\"]";
 
 
     public Locator setUsernameField() {
@@ -22,15 +22,15 @@ public class Login {
     }
 
     public Locator setPasswordField() {
-        return page.locator(PasswordFieldLocator);
+        return page.locator(passwordFieldLocator);
     }
 
-    public Locator ClickLoginButton() {
-        return page.locator(LoginButtonLocator);
+    public Locator clickLoginButton() {
+        return page.locator(loginButtonLocator);
     }
 
-    public void VerifyLogin() {
-        page.locator(ShoppingCart).isDisabled();
+    public void verifyLogin() {
+        page.locator(shoppingCart).isDisabled();
     }
 
 }

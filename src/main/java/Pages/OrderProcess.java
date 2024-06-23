@@ -10,20 +10,20 @@ public class OrderProcess {
         this.page = page;
     }
 
-    final String ShoppingCartLocator = "//*[@id=\"shopping_cart_container\"]/a";
+    final String shoppingCartLocator = "//*[@id=\"shopping_cart_container\"]/a";
 
     // add any Product to Shopping Cart dynamic using ProductName
-    public Locator AddProduct(String ProductName) {
-        return page.locator("//div[text()=\"" + ProductName + "\"]//following::button[1]");
+    public Locator addProduct(String productName) {
+        return page.locator("//div[text()=\"" + productName + "\"]//following::button[1]");
     }
 
     // verify any Product dynamic using ProductName
-    public Locator VerifyProduct(String ProductName) {
-        return page.locator("//*[text()=\"" + ProductName + "\"]");
+    public Locator verifyProduct(String productName) {
+        return page.locator("//*[text()=\"" + productName + "\"]");
     }
 
-    public Locator NaviToShoppingCart() {
-        return page.locator(ShoppingCartLocator);
+    public Locator naviToShoppingCart() {
+        return page.locator(shoppingCartLocator);
     }
 
 }

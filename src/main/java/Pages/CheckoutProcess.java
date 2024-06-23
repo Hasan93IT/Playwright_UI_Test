@@ -11,46 +11,46 @@ public class CheckoutProcess {
     }
 
     // locators of checkout
-    final String CheckoutButtonLocator = "//*[@id=\"checkout\"]";
-    final String FirstNameField = "//*[@id=\"first-name\"]";
-    final String LastNameField = "//*[@id=\"last-name\"]";
-    final String PostalCodeField = "//*[@id=\"postal-code\"]";
-    final String ContinueButton = "//*[@id=\"continue\"]";
-    final String FinishButton = "//*[@id=\"finish\"]";
-    final String PaymentInformationText = "//*[@data-test=\"payment-info-value\"]";
-    final String VerifyFinishOrder = "//*[contains(text(),\"Thank you for your order!\")]";
+    final String checkoutButtonLocator = "//*[@id=\"checkout\"]";
+    final String firstNameField = "//*[@id=\"first-name\"]";
+    final String lastNameField = "//*[@id=\"last-name\"]";
+    final String postalCodeField = "//*[@id=\"postal-code\"]";
+    final String continueButton = "//*[@id=\"continue\"]";
+    final String finishButton = "//*[@id=\"finish\"]";
+    final String paymentInformationText = "//*[@data-test=\"payment-info-value\"]";
+    final String verifyFinishOrder = "//*[contains(text(),\"Thank you for your order!\")]";
 
     // to get locators of checkout
-    public Locator CheckoutButton() {
-        return page.locator(CheckoutButtonLocator);
+    public Locator checkoutButton() {
+        return page.locator(checkoutButtonLocator);
     }
 
-    public Locator SetFirstName() {
-        return page.locator(FirstNameField);
+    public Locator setFirstName() {
+        return page.locator(firstNameField);
     }
 
-    public Locator SetLastName() {
-        return page.locator(LastNameField);
+    public Locator setLastName() {
+        return page.locator(lastNameField);
     }
 
-    public Locator SetPostalCode() {
-        return page.locator(PostalCodeField);
+    public Locator setPostalCode() {
+        return page.locator(postalCodeField);
     }
 
-    public Locator ContinueButton() {
-        return page.locator(ContinueButton);
+    public Locator continueButton() {
+        return page.locator(continueButton);
     }
 
-    public Locator FinishButton() {
-        return page.locator(FinishButton);
+    public Locator finishButton() {
+        return page.locator(finishButton);
     }
 
-    public Locator PaymentInformationText() {
-        return page.locator(PaymentInformationText);
+    public Locator paymentInformationText() {
+        return page.locator(paymentInformationText);
     }
 
-    public Locator VerifyFinishOrder() {
-        return page.locator(VerifyFinishOrder);
+    public Locator verifyFinishOrder() {
+        return page.locator(verifyFinishOrder);
     }
 
 }

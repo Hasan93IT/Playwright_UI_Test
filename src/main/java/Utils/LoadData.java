@@ -1,8 +1,6 @@
 package Utils;
 
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.IOException;
+import java.io.*;
 import java.util.Properties;
 
 public class LoadData {
@@ -19,11 +17,25 @@ public class LoadData {
         try {
             stream = new FileInputStream(path);
             pro.load(stream);
-        } catch (FileNotFoundException e) {
-            System.out.println(e.getMessage());
         } catch (IOException e) {
             System.out.println(e.getMessage());
         }
         return pro;
     }
+
+//    private static Properties loadProperties(String path) {
+//        Properties pro = new Properties();
+//        FileInputStream stream;
+//
+//        try {
+//            stream = new FileInputStream(path);
+//            pro.load(stream);
+//        } catch (FileNotFoundException e) {
+//            System.out.println(e.getMessage());
+//        } catch (IOException e) {
+//            System.out.println(e.getMessage());
+//        }
+//        return pro;
+//    }
+
 }

@@ -24,9 +24,9 @@ Feature: UI-Test for Web-App using Playwright
   Scenario Outline: Test Checkout Process
     Given Navigate to Checkout
     And Add User Information "<firstName>" and "<lastname>" and "<PLZ>"
-    And Validate Checkout Overview "<Product1>" and "<Product2>"
+    And Validate Checkout Overview "<Product11>" and "<Product22>"
     And Finish Order
     Then Verify Finish Order
     Examples:
-      | firstName | lastname | PLZ   | Product1              | Product2            |
+      | firstName | lastname | PLZ   | Product11              | Product22            |
       | Demo      | Test     | 22222 | Sauce Labs Bike Light | Sauce Labs Backpack |
