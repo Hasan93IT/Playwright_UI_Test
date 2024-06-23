@@ -16,11 +16,12 @@ außerdem wird der Test auf GitHub Action `headless` ausgeführt.
 
 
 
-##Configuration des Tests
+## Configuration des Tests
+
 #### in der Datei [config.properties](src/test/resources/config.properties) können Browser sowie setBrowserHeadless und Link der Web-App umgestellt werden.
 
 ## Ausführen des Tests
-####1- In der Datei `Testsuite.feature`
-####2- In der Klasse `RunCucumberTest`
-####3- In der Konsole mit dem Befehl `mvn test` für das gesamte test oder mit`mvn test -Dgroups="Tagname"`, wobei "Tagname" in dem Fall (Login, Order,Checkout) ist.
-####4- Der Test wird auch automatisch in GitHub Action nach committen ausgeführt, außerdem wird der letzte html-report global [Lin von Report in Github](https://hasan93it.github.io/Playwright_UI_Test/reports/cucumber/report.html) angezeigt  
+#### 1- In der Datei `Testsuite.feature`
+#### 2- In der Klasse `RunCucumberTest`
+#### 3- In der Konsole mit dem Befehl `mvn test` für das gesamte test oder mit`mvn test -Dgroups="Tagname"`, wobei "Tagname" in dem Fall (Login, Order,Checkout) ist.
+#### 4- Der Test wird auch automatisch in GitHub Action nach committen ausgeführt, außerdem wird der letzte html-report global [Lin von Report in Github](https://hasan93it.github.io/Playwright_UI_Test/reports/cucumber/report.html) angezeigt  
