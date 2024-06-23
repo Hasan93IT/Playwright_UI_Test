@@ -3,7 +3,12 @@ package steps;
 import Pages.*;
 import Utils.*;
 import com.microsoft.playwright.*;
+import io.cucumber.java.After;
+import io.cucumber.java.AfterAll;
+import io.cucumber.java.BeforeAll;
 import io.cucumber.java.en.*;
+import org.junit.jupiter.api.AfterEach;
+
 import java.util.logging.Level;
 
 
@@ -92,5 +97,10 @@ public class MyStepdefs {
     @Then("Verify Finish Order")
     public void verifyFinishOrder() {
         checkoutProcess.VerifyFinishOrder().isDisabled();
+    }
+
+    @AfterEach
+    public void closeApp() {
+        factory.closeApp();
     }
 }

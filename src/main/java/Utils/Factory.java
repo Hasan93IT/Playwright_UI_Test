@@ -2,17 +2,19 @@ package Utils;
 
 import com.microsoft.playwright.*;
 
+
 public class Factory {
     //to get the Browser properties form config file
     private final String BrowserName = LoadData.userData.getProperty("browser");
     private final String setBrowserHeadless1 = LoadData.userData.getProperty("setBrowserHeadless");
-    boolean setBrowserHeadless=Boolean.parseBoolean(setBrowserHeadless1);
+    boolean setBrowserHeadless = Boolean.parseBoolean(setBrowserHeadless1);
+    public Playwright playwright;
 
+    public Browser setBrowser() {
 
-    public Browser setBrowser( ) {
-
-        Playwright playwright = Playwright.create();
+        playwright = Playwright.create();
         Browser browser = null;
+
         if (BrowserName.equals("firefox")) {
             browser = playwright.firefox().launch(
                     new BrowserType.LaunchOptions().setHeadless(setBrowserHeadless)
@@ -27,5 +29,9 @@ public class Factory {
             );
         }
         return browser;
+    }
+
+    public void closeApp() {
+        playwright.close();
     }
 }
