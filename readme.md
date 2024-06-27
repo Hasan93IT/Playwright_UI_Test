@@ -16,7 +16,7 @@ außerdem wird der Test auf GitHub Action `headless` ausgeführt.
 
 
 
-## Configuration des Tests
+## Configuration des Test
 
 #### in der Datei [config.properties](src/test/resources/config.properties) können Browser sowie setBrowserHeadless und Link der Web-App umgestellt werden.
 
