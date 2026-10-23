@@ -1,6 +1,7 @@
 Pages\Login.class
 Utils\LoadData.class
+Utils\Factory.class
+Utils\Config.class
 Utils\Util.class
 Pages\CheckoutProcess.class
-Utils\Factory.class
 Pages\OrderProcess.class

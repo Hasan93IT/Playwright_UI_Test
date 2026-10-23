@@ -1,14 +1,15 @@
 package steps;
 
-import org.junit.platform.suite.api.*;
-import static io.cucumber.junit.platform.engine.Constants.*;
+import io.cucumber.junit.Cucumber;
+import io.cucumber.junit.CucumberOptions;
+import org.junit.runner.RunWith;
 
-@Suite
-@IncludeEngines("cucumber")
-@SelectClasspathResource("features/")
-@ConfigurationParameter(key = PLUGIN_PROPERTY_NAME, value = "pretty")
-@ConfigurationParameter(key = GLUE_PROPERTY_NAME, value = "")
-@ConfigurationParameter(key = PLUGIN_PROPERTY_NAME, value = "pretty,html:reports/cucumber/report.html,json:reports/cucumber/report.json")
-
+@RunWith(Cucumber.class)
+@CucumberOptions(
+        features = "classpath:features",
+        glue = "steps",
+        plugin = {"pretty", "html:target/cucumber-reports/html", "json:target/cucumber-reports/cucumber.json"},
+        publish = false
+)
 public class RunCucumberTest {
 }

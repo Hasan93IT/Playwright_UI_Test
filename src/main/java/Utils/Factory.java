@@ -1,49 +1,69 @@
 package Utils;
 
 import com.microsoft.playwright.*;
-
-import java.util.logging.Level;
-
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class Factory {
-    //to get the Browser properties form config file
-    private final String browserName = LoadData.userData.getProperty("browser");
-    private final String setBrowserHeadless1 = LoadData.userData.getProperty("setBrowserHeadless");
-    private final boolean setBrowserHeadless = Boolean.parseBoolean(setBrowserHeadless1);
-    public Playwright playwright;
-    public String browserNameToLowerCase = browserName.toLowerCase();
-    final String warringMessage = "The given browser type is not supported, the WebKit browser is used instead.";
-    public Browser browser;
+    private static final Logger log = LoggerFactory.getLogger(Factory.class);
+    private final Config config = Config.getInstance();
+    private Playwright playwright;
+    private Browser browser;
 
-    public void browserTypWarring() {
-        if (browserNameToLowerCase.equals("chrome") || browserNameToLowerCase.equals("firefox")) {
-            Util.logger(Level.INFO, "Browser: " + browserNameToLowerCase);
-        } else {
-            Util.logger(Level.WARNING, warringMessage);
-        }
-    }
-
-    public Browser setBrowser() {
-        browserTypWarring();
-
-        playwright = Playwright.create();
-        if (browserNameToLowerCase.equals("firefox")) {
-            browser = playwright.firefox().launch(
-                    new BrowserType.LaunchOptions().setHeadless(setBrowserHeadless)
-            );
-        } else if (browserNameToLowerCase.equals("chrome")) {
-            browser = playwright.chromium().launch(
-                    new BrowserType.LaunchOptions().setHeadless(setBrowserHeadless)
-            );
-        } else {
-            browser = playwright.webkit().launch(
-                    new BrowserType.LaunchOptions().setHeadless(setBrowserHeadless)
-            );
+    public Browser getBrowser() {
+        if (browser == null || !browser.isConnected()) {
+            initializeBrowser();
         }
         return browser;
     }
 
+    public Page newPage() {
+        Browser browser = getBrowser();
+        Browser.NewContextOptions contextOptions = new Browser.NewContextOptions()
+                .setViewportSize(1920, 1080)
+                .setIgnoreHTTPSErrors(true);
+        
+        BrowserContext context = browser.newContext(contextOptions);
+        context.setDefaultTimeout(config.getTimeout());
+        context.setDefaultNavigationTimeout(config.getNavigationTimeout());
+        
+        Page page = context.newPage();
+        log.info("New page created");
+        return page;
+    }
+
+    private void initializeBrowser() {
+        playwright = Playwright.create();
+        
+        BrowserType.LaunchOptions launchOptions = new BrowserType.LaunchOptions()
+                .setHeadless(config.isHeadless())
+                .setSlowMo(config.isHeadless() ? 0 : 50);
+
+        String browserName = config.getBrowser();
+        log.info("Launching browser: {} (headless: {})", browserName, config.isHeadless());
+
+        switch (browserName) {
+            case "firefox" -> browser = playwright.firefox().launch(launchOptions);
+            case "webkit" -> browser = playwright.webkit().launch(launchOptions);
+            case "chrome", "chromium" -> browser = playwright.chromium().launch(launchOptions);
+            default -> {
+                log.warn("Unknown browser '{}', falling back to Chromium", browserName);
+                browser = playwright.chromium().launch(launchOptions);
+            }
+        }
+    }
+
     public void closeApp() {
-        playwright.close();
+        try {
+            if (browser != null) {
+                browser.close();
+                log.info("Browser closed");
+            }
+        } finally {
+            if (playwright != null) {
+                playwright.close();
+                log.info("Playwright closed");
+            }
+        }
     }
 }

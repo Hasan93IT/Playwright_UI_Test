@@ -3,15 +3,27 @@ Feature: UI-Test for Web-App using Playwright
   @Login
   Scenario Outline: Test Login Process
     Given Navigate to application
-    When Login to application with"<Username>" and "<Password>"
+    When Login to application with "<Username>" and "<Password>"
     Then Verify Login
     Examples:
       | Username      | Password     |
       | standard_user | secret_sauce |
 
+  @LoginNegative
+  Scenario Outline: Test Failed Login Process
+    Given Navigate to application
+    When Login to application with "<Username>" and "<Password>"
+    Then Verify Login fails with "<ErrorMessage>"
+    Examples:
+      | Username      | Password | ErrorMessage                    |
+      | locked_out_user | secret_sauce | Sorry, this user has been locked out |
+      | invalid_user  | invalid_pass | Epic sadface: Username and password do not match |
+
   @Order
   Scenario Outline: Test Order Process
-    Given Add first "<Product1>" to Shopping Cart
+    Given Navigate to application
+    When Login to application with "standard_user" and "secret_sauce"
+    And Add first "<Product1>" to Shopping Cart
     And Add second "<Product2>" to Shopping Cart
     And Navigate to Shopping Cart
     Then Verify first "<Product1>" in Shopping Cart
@@ -19,10 +31,16 @@ Feature: UI-Test for Web-App using Playwright
     Examples:
       | Product1              | Product2            |
       | Sauce Labs Bike Light | Sauce Labs Backpack |
+      | Sauce Labs Bolt T-Shirt | Sauce Labs Onesie |
 
   @Checkout
   Scenario Outline: Test Checkout Process
-    Given Navigate to Checkout
+    Given Navigate to application
+    When Login to application with "standard_user" and "secret_sauce"
+    And Add first "<Product11>" to Shopping Cart
+    And Add second "<Product22>" to Shopping Cart
+    And Navigate to Shopping Cart
+    And Navigate to Checkout
     And Add User Information "<firstName>" and "<lastname>" and "<PLZ>"
     And Validate Checkout Overview "<Product11>" and "<Product22>"
     And Finish Order
@@ -30,3 +48,4 @@ Feature: UI-Test for Web-App using Playwright
     Examples:
       | firstName | lastname | PLZ   | Product11              | Product22            |
       | Demo      | Test     | 22222 | Sauce Labs Bike Light | Sauce Labs Backpack |
+      | John      | Doe      | 12345 | Sauce Labs Bolt T-Shirt | Sauce Labs Onesie |
