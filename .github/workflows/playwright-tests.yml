@@ -1,0 +1,82 @@
+name: Playwright UI Tests
+
+on:
+  push:
+    branches: [update-final]
+  pull_request:
+    branches: [update-final]
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: windows-latest
+    timeout-minutes: 30
+
+    env:
+      JAVA_VERSION: '17'
+      MAVEN_OPTS: '-Djava.io.tmpdir=C:/playwright-cache/tmp'
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: ${{ env.JAVA_VERSION }}
+          cache: 'maven'
+
+      - name: Create Playwright cache directory
+        run: |
+          New-Item -ItemType Directory -Force -Path "C:\playwright-cache\tmp"
+          New-Item -ItemType Directory -Force -Path "C:\playwright-cache\ms-playwright"
+
+      - name: Cache Playwright browsers
+        uses: actions/cache@v4
+        with:
+          path: C:\playwright-cache\ms-playwright
+          key: playwright-browsers-${{ runner.os }}-${{ hashFiles('**/pom.xml') }}
+          restore-keys: |
+            playwright-browsers-${{ runner.os }}-
+
+      - name: Cache Maven packages
+        uses: actions/cache@v4
+        with:
+          path: ~/.m2/repository
+          key: maven-${{ runner.os }}-${{ hashFiles('**/pom.xml') }}
+          restore-keys: |
+            maven-${{ runner.os }}-
+
+      - name: Install Playwright browsers
+        run: mvn exec:java -Dexec.mainClass=com.microsoft.playwright.CLI -Dexec.args="install" --batch-mode
+
+      - name: Install Playwright system dependencies
+        run: mvn exec:java -Dexec.mainClass=com.microsoft.playwright.CLI -Dexec.args="install-deps" --batch-mode
+
+      - name: Run tests
+        run: mvn test --batch-mode
+
+      - name: Upload Cucumber HTML Report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: cucumber-html-report
+          path: target/cucumber-reports/html/
+          retention-days: 7
+
+      - name: Upload Cucumber JSON Report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: cucumber-json-report
+          path: target/cucumber-reports/cucumber.json
+          retention-days: 7
+
+      - name: Upload Screenshots on Failure
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: failure-screenshots
+          path: target/cucumber-reports/html/*.png
+          retention-days: 7
