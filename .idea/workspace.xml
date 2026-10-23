@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="0e6dfead-2c3b-4af2-a865-bc2a38f34ff7" name="Changes" comment="update test">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/cucumber/report.html" beforeDir="false" afterPath="$PROJECT_DIR$/reports/cucumber/report.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/cucumber/report.json" beforeDir="false" afterPath="$PROJECT_DIR$/reports/cucumber/report.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Pages/CheckoutProcess.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Pages/CheckoutProcess.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Pages/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Pages/Login.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Pages/OrderProcess.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Pages/OrderProcess.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Utils/Factory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Utils/Factory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Utils/LoadData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Utils/LoadData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/steps/MyStepdefs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/steps/MyStepdefs.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/steps/RunCucumberTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/steps/RunCucumberTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/config.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/Testsuite.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/Testsuite.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Playwright_UI_Test-0.0.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Pages/CheckoutProcess.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Pages/CheckoutProcess.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Pages/Login.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Pages/Login.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Pages/OrderProcess.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Pages/OrderProcess.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Utils/Util.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Utils/Util.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-steps.RunCucumberTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/steps.RunCucumberTest.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/features/Testsuite.feature" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/features/Testsuite.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/steps/MyStepdefs.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/steps/MyStepdefs.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/steps/RunCucumberTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/steps/RunCucumberTest.class" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 6,
+  "fromUser": false
+}]]></component>
+  <component name="ProjectId" id="2iHOHvRioQQ9aeZqgu2BzLAqz2o" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Cucumber Java.Feature: Testsuite.executor": "Run",
+    "Cucumber Java.Scenario: Test Checkout Process.executor": "Run",
+    "Cucumber Java.Scenario: Test Failed Login Process.executor": "Run",
+    "Cucumber Java.Scenario: Test Login Process.executor": "Run",
+    "Cucumber Java.Scenario: Test Order Process.executor": "Run",
+    "JUnit.RunCucumberTest.executor": "Run",
+    "Maven.Playwright_UI_Test [clean].executor": "Run",
+    "Maven.Playwright_UI_Test [compile].executor": "Run",
+    "Maven.Playwright_UI_Test [install].executor": "Run",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "git-widget-placeholder": "updata-final",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable"
+  }
+}]]></component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="mvn clean compile" />
+      <command value="mvn test" />
+      <command value="mvn package" />
+      <command value="mvn clean install" />
+    </option>
+  </component>
+  <component name="RunManager" selected="JUnit.RunCucumberTest">
+    <configuration name="Feature: Testsuite" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="5" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/Testsuite.feature" />
+      <option name="GLUE" value="steps" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
+      <module name="Playwright_UI_Test" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter" />
+      <shortenClasspath name="NONE" />
+      <option name="SUGGESTED_NAME" value="Feature: Testsuite" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Scenario: Test Checkout Process" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="7" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/Testsuite.feature" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
+      <module name="Playwright_UI_Test" />
+      <option name="NAME_FILTER" value="^Test Checkout Process$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin teamcity --name &quot;^Test Checkout Process$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: Test Checkout Process" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Scenario: Test Failed Login Process" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="7" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/Testsuite.feature" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
+      <module name="Playwright_UI_Test" />
+      <option name="NAME_FILTER" value="^Test Failed Login Process$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin teamcity --name &quot;^Test Failed Login Process$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: Test Failed Login Process" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Scenario: Test Order Process" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="7" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/Testsuite.feature" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
+      <module name="Playwright_UI_Test" />
+      <option name="NAME_FILTER" value="^Test Order Process$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin teamcity --name &quot;^Test Order Process$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: Test Order Process" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RunCucumberTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Playwright_UI_Test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="steps.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="steps" />
+      <option name="MAIN_CLASS_NAME" value="steps.RunCucumberTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Cucumber Java.Scenario: Test Checkout Process" />
+      <item itemvalue="Cucumber Java.Scenario: Test Failed Login Process" />
+      <item itemvalue="Cucumber Java.Scenario: Test Order Process" />
+      <item itemvalue="Cucumber Java.Feature: Testsuite" />
+      <item itemvalue="JUnit.RunCucumberTest" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.RunCucumberTest" />
+        <item itemvalue="Cucumber Java.Feature: Testsuite" />
+        <item itemvalue="Cucumber Java.Scenario: Test Checkout Process" />
+        <item itemvalue="Cucumber Java.Scenario: Test Order Process" />
+        <item itemvalue="Cucumber Java.Scenario: Test Failed Login Process" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-30f59d01ecdd-a203e0a19954-intellij.indexing.shared.core-IU-262.10968.63" />
+        <option value="bundled-js-predefined-d6986cc7102b-4abd2a77f808-JavaScript-IU-262.10968.63" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0e6dfead-2c3b-4af2-a865-bc2a38f34ff7" name="Changes" comment="" />
+      <created>1719143954404</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1719143954404</updated>
+    </task>
+    <task id="LOCAL-00001" summary="add close app">
+      <created>1719145894274</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1719145894274</updated>
+    </task>
+    <task id="LOCAL-00002" summary="fix readme.md">
+      <created>1719146064287</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1719146064287</updated>
+    </task>
+    <task id="LOCAL-00003" summary="last update">
+      <created>1719175082712</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1719175082712</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="add close app" />
+    <MESSAGE value="fix readme.md" />
+    <MESSAGE value="last update" />
+    <MESSAGE value="update test" />
+    <option name="LAST_COMMIT_MESSAGE" value="update test" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>
